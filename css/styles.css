@@ -66,6 +66,7 @@
 }
 
 .btn-modal {
+  transition: fill var(--animation-duration) var(--animation-function);
   fill: var(--modal-btn-color);
 }
 
