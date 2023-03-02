@@ -40,7 +40,7 @@
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) rotate(180deg) scale(1.8, 1.8);
-  opacity: 0.5;
+  opacity: 0;
 }
 
 .modal {
