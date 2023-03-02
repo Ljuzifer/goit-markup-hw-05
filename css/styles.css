@@ -12,6 +12,7 @@
   --footer-social-hover: #31D0AA;
   --custumer-logo-color: #8e8f99;
   --modal-bg-color: #FCFCFC;
+  --modal-btn-color: #000000;
 
   --animation-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-duration: 250ms;
@@ -49,21 +50,34 @@
 
 .modal-close {
   position: absolute;
+  transition: background-color var(--animation-duration) var(--animation-function);
+
   display: flex;
   top: 24px;
   right: 24px;
   align-items: center;
   justify-content: center;
 
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  /* border: none; */
-  /* background-color: var(--footer-text-color); */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--header-background-color);
 }
 
 .btn-modal {
-  fill: #000;
+  fill: var(--modal-btn-color);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.modal-close:hover .btn-modal,
+.modal-close:focus .btn-modal {
+  fill: var(--hero-text-color);
 }
 
 /* body */
@@ -674,8 +688,6 @@ img {
 /* Portfolio's galary */
 
 .galary {
-  /* position: relative; */
-
   display: block;
   color: var(--main-text-color);
   
@@ -707,7 +719,7 @@ img {
   top: 0;
   left: 0;
   transform: translateY(100%);
-  transition: transform var(--animation-duration) va(--animation-function);
+  transition: transform var(--animation-duration) var(--animation-function);
 
   width: 360px;
   height: 300px;
